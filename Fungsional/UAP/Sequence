@@ -1,0 +1,37 @@
+# Data barang dan harganya dalam tuple
+data_barang = ('Pensil', 1500, 'Buku', 5000, 'Penggaris', 2000)
+
+# Fungsi untuk memisahkan data berdasarkan tipe datanya
+def pisahkan_data(data):
+    nama_barang = []
+    harga_barang = []
+
+    for i in range(0, len(data), 2):
+        nama_barang.append(data[i])
+    
+    for i in range(1, len(data), 2):
+        harga_barang.append(data[i])
+
+    return nama_barang, harga_barang
+
+# Fungsi untuk menggabungkan dua list menjadi sebuah dictionary
+def gabungkan_list_ke_dict(nama_barang, harga_barang):
+    result_dict = {}
+    for nama, harga in zip(nama_barang, harga_barang):
+        result_dict[nama] = harga
+    return result_dict
+
+# Memisahkan data pada no. 1
+nama_barang_list, harga_barang_list = pisahkan_data(data_barang)
+
+# Menggabungkan dua list pada hasil no. 2 menjadi sebuah dictionary
+hasil_dict = gabungkan_list_ke_dict(nama_barang_list, harga_barang_list)
+
+# Menampilkan hasil
+print("Data awal:")
+print(data_barang)
+print("\nData setelah dipisahkan:")
+print("Nama Barang:", nama_barang_list)
+print("Harga Barang:", harga_barang_list)
+print("\nData setelah digabungkan menjadi dictionary:")
+print(hasil_dict)

@@ -1,0 +1,60 @@
+<!-- update_task.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Task</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        color: red;
+      }
+
+      form {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      input[type="text"] {
+        padding: 8px;
+        font-size: 16px;
+      }
+
+      button {
+        padding: 8px;
+        font-size: 16px;
+        background-color: red;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Perbarui Data</h1>
+    <form action="/update_task/{{ index }}" method="post">
+      <input
+        type="text"
+        name="updatedTask"
+        placeholder="Input disini..."
+        required
+      />
+      <button type="submit">Perbarui</button>
+    </form>
+  </body>
+</html>

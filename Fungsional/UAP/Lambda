@@ -1,0 +1,22 @@
+# Fungsi klasifikasi_angka sebagai lambda
+klasifikasi_angka = lambda x: "positif" if x > 0 else ("Negatif" if x < 0 else "Nol")
+
+# Fungsi Pencarian_angka sebagai lambda
+Pencarian_angka = lambda list_angka, find: "found" if find in list_angka else "not found"
+
+# Contoh penggunaan klasifikasi_angka
+angka_positif = 5
+angka_negatif = -3
+angka_nol = 0
+
+print(klasifikasi_angka(angka_positif))  # Output: positif
+print(klasifikasi_angka(angka_negatif))  # Output: Negatif
+print(klasifikasi_angka(angka_nol))      # Output: Nol
+
+# Contoh penggunaan Pencarian_angka
+list_angka = [1, 2, 3, 4, 5]
+angka_cari1 = 3
+angka_cari2 = 8
+
+print(Pencarian_angka(list_angka, angka_cari1))  # Output: found
+print(Pencarian_angka(list_angka, angka_cari2))  # Output: not found
